@@ -29,12 +29,16 @@ body {
   color: #333;
   line-height: 1.6;
   color: var(--text-color-primary);
+  overflow-x: hidden;
 }
 a {
   font-size: var(--fs-title-sm);
   font-weight: var(--fw-medium);
   color: var(--text-color-secondary);
   text-decoration: none;
+}
+img {
+  max-width: 100%;
 }
 
 @media screen and (min-width: 1024px) {
