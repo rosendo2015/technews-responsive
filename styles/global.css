@@ -30,8 +30,14 @@ body {
   line-height: 1.6;
   color: var(--text-color-primary);
 }
+a {
+  font-size: var(--fs-title-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-color-secondary);
+  text-decoration: none;
+}
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
   .only-desktop {
     display: block;
   }
