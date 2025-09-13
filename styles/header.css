@@ -1,0 +1,42 @@
+header {
+  margin-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    & img {
+      width: 6rem;
+    }
+  }
+}
+.only-desktop {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    margin: 0 auto;
+    max-width: 1024px;
+    margin-top: 1.25rem;
+    .logo {
+      & img {
+        width: 10rem;
+      }
+    }
+
+    & nav {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      &img {
+        width: 40px;
+      }
+      & span {
+        font-size: 1rem;
+        font-weight: var(--fw-bold);
+      }
+    }
+  }
+  .only-desktop {
+    display: block;
+  }
+}
