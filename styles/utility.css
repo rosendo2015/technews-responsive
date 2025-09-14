@@ -30,13 +30,12 @@
   h2 {
     font-size: var(--fs-title-md);
     font-weight: var(--fw-bold);
-    margin-bottom: 0.5rem;
+
     line-height: 135%;
   }
   h3 {
     font-size: var(--fs-title-sm);
     font-weight: var(--fw-bx);
-    margin-bottom: 0.75rem;
     line-height: 140%;
   }
 }
