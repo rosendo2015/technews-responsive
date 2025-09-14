@@ -41,7 +41,10 @@ img {
   max-width: 100%;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
+  body {
+    overflow-x: hidden;
+  }
   .only-desktop {
     display: block;
   }
