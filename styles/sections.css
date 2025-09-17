@@ -225,7 +225,7 @@ section header {
     .news3-grid {
       display: grid;
       grid-template-columns: 1fr;
-      padding-inline: 3rem;
+
       & .only-desktop {
         min-width: 11rem;
         height: 11rem;
