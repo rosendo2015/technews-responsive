@@ -6,20 +6,21 @@ section header {
   padding-block: 0.75rem 1.5rem;
 
   a {
+    display: flex;
     justify-self: end;
     align-items: center;
     gap: 0.5rem;
+  }
 
-    & span {
-      background-image: url("../assets/icons/ArrowRight.svg");
-      background-repeat: no-repeat;
-      width: 1rem;
-      height: 1rem;
-    }
-    & :hover span {
-      background-image: url("../assets/icons/ArrowRight-hover.svg");
-      background-repeat: no-repeat;
-    }
+  a span {
+    background-image: url("../assets/icons/ArrowRight.svg");
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 1rem;
+  }
+  a:hover span {
+    background-image: url("../assets/icons/ArrowRight-hover.svg");
+    background-repeat: no-repeat;
   }
   & h3,
   a {
@@ -29,11 +30,10 @@ section header {
   }
 }
 #banner-news {
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding-inline: 2rem;
+
   margin-block: 2.5rem;
   & .news1 {
     border-radius: 0.25rem;
@@ -59,6 +59,7 @@ section header {
     gap: 1rem;
 
     & .card {
+      max-height: 12.5rem;
       border-radius: 0.25rem;
 
       overflow: hidden;
@@ -93,7 +94,6 @@ section header {
   }
 }
 #news2 {
-  margin-inline: 2rem;
   .card {
     position: relative;
     margin-bottom: 2rem;
@@ -121,11 +121,10 @@ section header {
     display: inline-flex;
   }
 
-  margin-inline: 2rem;
   .news3-grid {
     display: grid;
     gap: 2rem;
-
+    padding-bottom: 2rem;
     & figure {
       display: flex;
       align-items: flex-start;
@@ -152,8 +151,6 @@ section header {
   }
 }
 aside {
-  margin-block: 2rem;
-  padding-inline: 2rem;
   img {
     width: 100%;
     height: auto;
@@ -161,15 +158,14 @@ aside {
   }
 }
 #news4 {
-  margin-inline: 2rem;
   padding-block: 2rem;
   .news4-grid {
     display: grid;
-    gap: 2rem;
   }
   & figure {
     display: flex;
     gap: 0.94rem;
+    margin-bottom: 1.25rem;
     & img {
       width: 4.5rem;
       height: 4.5rem;
@@ -204,7 +200,6 @@ aside {
     }
   }
   #news2 {
-    padding-inline: 2rem;
     max-width: 768px;
     margin-inline: auto;
     .news2-grid {
@@ -216,7 +211,7 @@ aside {
   }
   #news3 {
     margin-inline: auto;
-    padding-inline: 2rem;
+
     max-width: 768px;
     .news3-grid {
       display: grid;
@@ -238,9 +233,14 @@ aside {
   }
 }
 @media screen and (min-width: 1440px) {
+  header {
+    grid-area: header;
+  }
   #banner-news {
+    min-width: 100%;
+    grid-area: banner-news;
     max-width: 1440px;
-    img {
+    & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -248,22 +248,22 @@ aside {
 
     .news-grid {
       .card {
-        height: 12.8rem;
+        min-height: 100%;
       }
     }
   }
   #news2 {
-    padding-inline: 2rem;
+    grid-area: news2;
     max-width: 1440px;
     margin-inline: auto;
     .news2-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
-      margin-top: 1.5rem;
     }
   }
   #news3 {
+    grid-area: news3;
     max-width: 100%;
     .only-mobile {
       display: none;
@@ -279,12 +279,20 @@ aside {
     }
   }
   aside {
+    min-width: 100%;
+    height: 17.5rem;
+    grid-area: aside;
+    margin-bottom: 2rem;
     & img {
       max-width: 100%;
     }
   }
   #news4 {
-    margin-inline: 2rem;
+    grid-area: news4;
+
     max-width: 1440px;
+    & figure {
+      max-height: 4.5rem;
+    }
   }
 }

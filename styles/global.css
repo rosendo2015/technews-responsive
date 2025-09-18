@@ -22,6 +22,9 @@
   --fw-medium: 500;
   --fw-regular: 400;
 }
+.app {
+  padding-inline: 1rem;
+}
 body {
   background-color: var(--bg-color);
   font-family: var(--ff-archivo);
@@ -37,11 +40,31 @@ a {
   color: var(--text-color-secondary);
   text-decoration: none;
 }
+a:hover {
+  color: var(--brand-color-light);
+}
 img {
   max-width: 100%;
 }
-
+@media screen and (min-width: 768px) {
+  .app {
+    max-width: 768px;
+    margin-inline: auto;
+  }
+}
 @media screen and (min-width: 1440px) {
+  .app {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "banner-news banner-news"
+      "news2 news2"
+      "news3 aside"
+      "news3 news4";
+    margin-inline: auto;
+    max-width: 1440px;
+    gap: 2rem;
+  }
   body {
     overflow-x: hidden;
   }

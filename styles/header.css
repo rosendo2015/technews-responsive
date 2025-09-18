@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding-block: 1rem;
   }
   .menu-secondary {
     margin-left: auto;
@@ -28,7 +28,7 @@ header {
     align-items: center;
     list-style: none;
     padding-block: 0.88rem;
-    padding-inline: 1rem;
+
     border-top: 1px solid var(--stroke-color);
     border-bottom: 1px solid var(--stroke-color);
     li {
@@ -45,8 +45,6 @@ header {
 }
 @media screen and (min-width: 768px) {
   header {
-    margin-inline: auto;
-    max-width: 768px;
     width: 100%;
     .logo {
       width: 10rem;
@@ -55,12 +53,9 @@ header {
 }
 @media screen and (min-width: 1440px) {
   header {
-    margin: 0 auto;
-    max-width: 1440px;
     .menu-primary {
       width: 100%;
       justify-content: space-between;
-      padding: 1.25rem 2rem;
     }
 
     .logo {
@@ -80,7 +75,6 @@ header {
       }
     }
     ul[rule="list"] {
-      padding-inline: 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
